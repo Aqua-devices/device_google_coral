@@ -28,8 +28,3 @@ endif
 ifeq ($(shell test -d vendor/codeaurora/telephony/; echo $$?),1)
 $(error vendor/codeaurora/telephony is required to build)
 endif
-
-# Confirm that prebuilt vendor image is present
-ifeq ($(shell test -d vendor/images/coral/; echo $$?),1)
-$(error Prebuilt coral vendor image is missing from local source)
-endif
